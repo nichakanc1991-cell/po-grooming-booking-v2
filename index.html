@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>P.O. Grooming — ระบบจองคิว</title>
+  <title>P.O. Grooming</title>
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -14,40 +14,49 @@
     body {
       margin: 0;
       font-family: "Prompt", sans-serif;
-      background: linear-gradient(to bottom, var(--po-green) 10%, #f4ead1);
-      color: #fff;
+      background: linear-gradient(to bottom, var(--po-green) 0%, #F4E8C9 100%);
+      color: var(--po-cream);
       text-align: center;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 2rem 1rem;
     }
 
     header img {
-      width: 110px;
+      width: 130px;
       height: auto;
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
     }
 
     h1 {
-      font-weight: 600;
       font-size: 1.8rem;
       color: var(--po-gold);
-      margin: 0.5rem 0;
+      font-weight: 700;
+      margin: 0.3rem 0;
     }
 
     h2 {
       font-size: 1rem;
       color: var(--po-cream);
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
+      margin-top: 0.4rem;
       margin-bottom: 2rem;
+    }
+
+    .divider {
+      width: 100px;
+      height: 2px;
+      background: var(--po-gold);
+      margin: 0.8rem auto 1rem;
+      border-radius: 2px;
     }
 
     .lang {
       margin-bottom: 1.5rem;
       font-size: 0.9rem;
-      color: var(--po-cream);
     }
     .lang a {
       color: var(--po-cream);
@@ -58,23 +67,40 @@
       color: var(--po-gold);
     }
 
+    /* ปุ่มหลัก */
     .btn {
       display: inline-block;
       margin: 0.5rem;
-      padding: 0.8rem 2.2rem;
-      background: var(--po-cream);
-      color: var(--po-green);
-      border-radius: 8px;
+      padding: 0.9rem 2.8rem;
+      border-radius: 10px;
       font-weight: 600;
-      border: none;
       font-size: 1rem;
       cursor: pointer;
-      transition: all 0.2s ease-in-out;
+      transition: all 0.25s ease-in-out;
+      text-decoration: none;
     }
 
-    .btn:hover {
+    /* ปุ่มบน: อาบน้ำ-ตัดขน */
+    .btn-main {
+      background: var(--po-cream);
+      color: var(--po-green);
+      border: 2px solid var(--po-cream);
+    }
+    .btn-main:hover {
       background: var(--po-gold);
+      border-color: var(--po-gold);
       color: white;
+    }
+
+    /* ปุ่มล่าง: โรงแรมแมว */
+    .btn-alt {
+      background: var(--po-green);
+      color: var(--po-gold);
+      border: 2px solid var(--po-gold);
+    }
+    .btn-alt:hover {
+      background: var(--po-gold);
+      color: var(--po-green);
     }
 
     footer {
@@ -87,8 +113,10 @@
     }
 
     @media (max-width: 768px) {
-      h1 { font-size: 1.5rem; }
-      .btn { width: 80%; }
+      header img { width: 100px; }
+      h1 { font-size: 1.4rem; }
+      h2 { font-size: 0.9rem; margin-bottom: 1.5rem; }
+      .btn { width: 80%; font-size: 1rem; padding: 1rem; }
     }
   </style>
 </head>
@@ -96,7 +124,8 @@
 <body>
   <header>
     <img src="logo-po.png" alt="PO Grooming Logo">
-    <h1>P.O. Grooming — ระบบจองคิว</h1>
+    <h1>PO GROOMING PRIVATE & PREMIUM</h1>
+    <div class="divider"></div>
     <h2>Fur Styling • Cat & Dog Spa • Premium Hotel</h2>
   </header>
 
@@ -105,12 +134,12 @@
   </div>
 
   <div class="buttons">
-    <a href="booking.html" class="btn">จองคิวอาบน้ำ–ตัดขน</a><br>
-    <a href="#" class="btn">จองห้องพักโรงแรมแมว</a>
+    <a href="booking.html" class="btn btn-main">จองคิวอาบน้ำ–ตัดขน</a><br>
+    <a href="#" class="btn btn-alt">จองห้องพักโรงแรมแมว</a>
   </div>
 
   <footer>
-    © 2025 P.O. Grooming | Private & Premium Pet Care
+    © 2025 PO Grooming & Cat Hotel | Private & Premium Cat Care Experience
   </footer>
 </body>
 </html>
