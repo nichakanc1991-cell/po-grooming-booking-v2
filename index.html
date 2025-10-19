@@ -1,145 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>P.O. Grooming</title>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PO Grooming & Cat Hotel</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <style>
-    :root {
-      --po-green: #0F3B2E;
-      --po-gold: #D5B774;
-      --po-cream: #F2E2C4;
-    }
     body {
-      margin: 0;
       font-family: "Prompt", sans-serif;
-      background: linear-gradient(to bottom, var(--po-green) 0%, #F4E8C9 100%);
-      color: var(--po-cream);
-      text-align: center;
+      background: linear-gradient(to bottom, #0F3B2E, #1E5D48, #F2E2C4);
+      color: #F2E2C4;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem 1rem;
+      text-align: center;
     }
-
-    header img {
-      width: 130px;
-      height: auto;
-      margin-bottom: 1.2rem;
-    }
-
-    h1 {
-      font-size: 1.8rem;
-      color: var(--po-gold);
-      font-weight: 700;
-      margin: 0.3rem 0;
-    }
-
-    h2 {
-      font-size: 1rem;
-      color: var(--po-cream);
-      letter-spacing: 0.5px;
-      margin-top: 0.4rem;
-      margin-bottom: 2rem;
-    }
-
-    .divider {
-      width: 100px;
-      height: 2px;
-      background: var(--po-gold);
-      margin: 0.8rem auto 1rem;
-      border-radius: 2px;
-    }
-
-    .lang {
-      margin-bottom: 1.5rem;
-      font-size: 0.9rem;
-    }
-    .lang a {
-      color: var(--po-cream);
-      text-decoration: none;
-      margin: 0 0.3rem;
-    }
-    .lang a:hover {
-      color: var(--po-gold);
-    }
-
-    /* ปุ่มหลัก */
     .btn {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.9rem 2.8rem;
-      border-radius: 10px;
+      display: block;
+      width: 80%;
+      max-width: 300px;
+      margin: 1rem auto;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
       font-weight: 600;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: all 0.25s ease-in-out;
-      text-decoration: none;
+      border-radius: 12px;
+      transition: 0.3s;
     }
-
-    /* ปุ่มบน: อาบน้ำ-ตัดขน */
     .btn-main {
-      background: var(--po-cream);
-      color: var(--po-green);
-      border: 2px solid var(--po-cream);
+      background-color: #F2E2C4;
+      color: #0F3B2E;
     }
     .btn-main:hover {
-      background: var(--po-gold);
-      border-color: var(--po-gold);
-      color: white;
+      background-color: #D5B774;
+    }
+    .btn-secondary {
+      background-color: #0F3B2E;
+      color: #F2E2C4;
+      border: 2px solid #F2E2C4;
+    }
+    .btn-secondary:hover {
+      background-color: #1E5D48;
+    }
+        /* เพิ่มเงาให้องค์ประกอบเล็กน้อยให้ดูหรูขึ้น */
+    header img {
+      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
     }
 
-    /* ปุ่มล่าง: โรงแรมแมว */
-    .btn-alt {
-      background: var(--po-green);
-      color: var(--po-gold);
-      border: 2px solid var(--po-gold);
-    }
-    .btn-alt:hover {
-      background: var(--po-gold);
-      color: var(--po-green);
+    h1, p {
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     }
 
     footer {
-      position: fixed;
-      bottom: 10px;
-      width: 100%;
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--po-cream);
+      color: #F2E2C4;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     }
 
-    @media (max-width: 768px) {
-      header img { width: 100px; }
-      h1 { font-size: 1.4rem; }
-      h2 { font-size: 0.9rem; margin-bottom: 1.5rem; }
-      .btn { width: 80%; font-size: 1rem; padding: 1rem; }
-    }
   </style>
 </head>
-
 <body>
-  <header>
-    <img src="logo-po.png" alt="PO Grooming Logo">
-    <h1>PO GROOMING PRIVATE & PREMIUM</h1>
-    <div class="divider"></div>
-    <h2>Fur Styling • Cat & Dog Spa • Premium Hotel</h2>
+  <!-- Header -->
+  <header class="py-6">
+    <img src="logo-po.png" alt="PO Grooming Logo" class="mx-auto w-28 mb-3">
+    <h1 class="text-3xl font-bold">PO GROOMING PRIVATE & PREMIUM</h1>
+    <p class="text-lg mt-2">✂️ FUR STYLING CREATIVE PET GROOMING</p>
+    <p class="text-md">🛁 PET SPA & SALON | 🐈🏩 CAT HOTEL | 🛍️ PET SHOP</p>
+
+    <!-- Language Switcher -->
+    <div class="mt-4">
+      <button onclick="setLang('th')" class="mx-2">ไทย</button> |
+      <button onclick="setLang('en')" class="mx-2">English</button> |
+      <button onclick="setLang('zh')" class="mx-2">中文</button>
+    </div>
   </header>
 
-  <div class="lang">
-    <a href="#">ไทย</a> | <a href="#">English</a> | <a href="#">中文</a>
-  </div>
+  <!-- Main Buttons -->
+  <main class="mt-10">
+    <a href="https://nichakanc1991-cell.github.io/PO_Bookings/grooming.html?lang=th"
+   class="btn btn-main" data-i18n="btn.grooming">
+   จองคิวอาบน้ำ–ตัดขน
+   </a>
 
-  <div class="buttons">
-    <a href="booking.html" class="btn btn-main">จองคิวอาบน้ำ–ตัดขน</a><br>
-    <a href="#" class="btn btn-alt">จองห้องพักโรงแรมแมว</a>
-  </div>
+    <a href="https://nichakanc1991-cell.github.io/PO_Bookings/hotel.html?lang=th"
+   class="btn btn-secondary" data-i18n="btn.hotel">
+   จองห้องพักโรงแรมแมว
+   </a>
 
-  <footer>
+  </main>
+
+  <footer class="mt-20 pb-4 text-sm">
     © 2025 PO Grooming & Cat Hotel | Private & Premium Cat Care Experience
   </footer>
+
+  <script src="js/i18n.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
