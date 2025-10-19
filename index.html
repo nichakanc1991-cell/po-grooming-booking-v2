@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>P.O. Grooming — ระบบจองคิว</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --po-green: #0F3B2E;
+      --po-gold: #D5B774;
+      --po-cream: #F2E2C4;
+    }
+    body {
+      margin: 0;
+      font-family: "Prompt", sans-serif;
+      background: linear-gradient(to bottom, var(--po-green) 10%, #f4ead1);
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header img {
+      width: 110px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 1.8rem;
+      color: var(--po-gold);
+      margin: 0.5rem 0;
+    }
+
+    h2 {
+      font-size: 1rem;
+      color: var(--po-cream);
+      letter-spacing: 1px;
+      margin-bottom: 2rem;
+    }
+
+    .lang {
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--po-cream);
+    }
+    .lang a {
+      color: var(--po-cream);
+      text-decoration: none;
+      margin: 0 0.3rem;
+    }
+    .lang a:hover {
+      color: var(--po-gold);
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.8rem 2.2rem;
+      background: var(--po-cream);
+      color: var(--po-green);
+      border-radius: 8px;
+      font-weight: 600;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .btn:hover {
+      background: var(--po-gold);
+      color: white;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--po-cream);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 1.5rem; }
+      .btn { width: 80%; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="logo-po.png" alt="PO Grooming Logo">
+    <h1>P.O. Grooming — ระบบจองคิว</h1>
+    <h2>Fur Styling • Cat & Dog Spa • Premium Hotel</h2>
+  </header>
+
+  <div class="lang">
+    <a href="#">ไทย</a> | <a href="#">English</a> | <a href="#">中文</a>
+  </div>
+
+  <div class="buttons">
+    <a href="booking.html" class="btn">จองคิวอาบน้ำ–ตัดขน</a><br>
+    <a href="#" class="btn">จองห้องพักโรงแรมแมว</a>
+  </div>
+
+  <footer>
+    © 2025 P.O. Grooming | Private & Premium Pet Care
+  </footer>
+</body>
+</html>
