@@ -157,22 +157,38 @@
     }
 
     // เมื่อกดยืนยัน
-    function submitBooking() {
-      const name = document.getElementById("name").value;
-      const phone = document.getElementById("phone").value;
-      const pet = document.getElementById("petName").value;
-      const date = document.getElementById("bookingDate").value;
-      const time = document.getElementById("bookingTime").value;
+  const scriptURL = "https://script.google.com/macros/s/AKfycbzBA7CrCciGV8fB4MFL-Wt64kx7Dshs2Dd-ozmTC62Fw4cDbnHhNbVUHDme1yQepROd/exec"; // <<== ใส่ URL ของคุณตรงนี้
 
-      if (!name || !phone || !pet || !date || !time || !document.getElementById("agree").checked) {
-        alert("กรุณากรอกข้อมูลให้ครบถ้วนและยอมรับเงื่อนไขก่อนค่ะ");
-        return;
-      }
+  function submitBooking() {
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const pet = document.getElementById("petName").value;
+    const petType = document.getElementById("petType").value;
+    const date = document.getElementById("bookingDate").value;
+    const time = document.getElementById("bookingTime").value;
 
+    if (!name || !phone || !pet || !petType || !date || !time || !document.getElementById("agree").checked) {
+      alert("กรุณากรอกข้อมูลให้ครบถ้วนและยอมรับเงื่อนไขก่อนค่ะ");
+      return;
+    }
+
+    const bookingData = { name, phone, pet, petType, date, time };
+
+    fetch(scriptURL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(bookingData),
+    })
+    .then(() => {
+      alert("✅ บันทึกข้อมูลเรียบร้อย! โปรดส่งสลิปทางไลน์เพื่อยืนยันการจอง");
       const msg = `📅 จองคิวอาบน้ำ–ตัดขน\nชื่อ: ${name}\nเบอร์: ${phone}\nสัตว์เลี้ยง: ${pet}\nวันที่: ${date}\nเวลา: ${time}`;
       const encoded = encodeURIComponent(msg);
       window.location.href = `https://line.me/R/msg/text/?${encoded}`;
-    }
+    })
+    .catch(() => alert("❌ เกิดข้อผิดพลาดในการบันทึก กรุณาลองใหม่อีกครั้ง"));
+  }
+
   </script>
 
 </body>
