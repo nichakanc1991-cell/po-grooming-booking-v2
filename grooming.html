@@ -376,7 +376,57 @@ document.getElementById("goLine").addEventListener("click", async () => {
   const url = `https://line.me/R/oaMessage/${encodeURIComponent(LINE_OA_ID)}/?text=${encodeURIComponent(msg)}`;
   window.open(url, "_blank");
 });
+  /* ===== โหลดข้อมูลจาก Google Sheet ===== */
+async function fetchSheet() {
+  syncBadge.textContent = "กำลังโหลด…";
+  syncBadge.className = "px-2 py-1 rounded bg-yellow-100 text-yellow-800";
+  try {
+    const res = await fetch(SHEET_GVIZ_JSON + "&ts=" + Date.now(), { cache: "no-store" });
+    if (!res.ok) throw new Error("GVIZ " + res.status);
+    const text = await res.text();
 
+    // แปลงข้อมูลจาก gviz เป็น object
+    const json = JSON.parse(text.substring(text.indexOf("{"), text.lastIndexOf("}") + 1));
+    const rows = json.table.rows;
+    availability = {};
+
+    rows.forEach(r => {
+      const c = r.c;
+      if (!c || !c[0] || !c[1]) return;
+      const dRaw = c[0].f || c[0].v;
+      const tRaw = c[1].f || c[1].v;
+      const sRaw = c[2]?.f || c[2]?.v || "ว่าง";
+
+      // แปลงวันที่
+      const match = /Date\((\d+),(\d+),(\d+)\)/.exec(dRaw);
+      if (!match) return;
+      const d = dayjs.tz({ year: +match[1], month: +match[2], day: +match[3] }).format("YYYY-MM-DD");
+
+      // แปลงเวลา
+      let t = "";
+      if (Array.isArray(tRaw)) {
+        const [h, m] = tRaw;
+        t = `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}`;
+      } else if (typeof tRaw === "string") {
+        t = tRaw.slice(0, 5);
+      }
+
+      if (!availability[d]) availability[d] = {};
+      availability[d][t] = sRaw.includes("เต็ม") ? "เต็ม"
+                        : sRaw.includes("ปิด") ? "ปิด"
+                        : sRaw.includes("รอมัดจำ") ? "รอมัดจำ"
+                        : "ว่าง";
+    });
+
+    syncBadge.textContent = "โหลดสำเร็จ " + dayjs().format("HH:mm");
+    syncBadge.className = "px-2 py-1 rounded bg-green-100 text-green-800";
+  } catch (err) {
+    console.error("โหลดชีตผิดพลาด:", err);
+    syncBadge.textContent = "โหลดไม่สำเร็จ";
+    syncBadge.className = "px-2 py-1 rounded bg-red-100 text-red-800";
+    availability = {};
+  }
+}
 /* ===== ส่วนอื่นใช้ของเดิมทั้งหมด ===== */
 document.getElementById("prevMonth").addEventListener("click",()=>{const prev=visibleMonth.subtract(1,"month");if(prev.isBefore(START_DATE,"month"))return;visibleMonth=prev;renderCalendar();});
 document.getElementById("nextMonth").addEventListener("click",()=>{const next=visibleMonth.add(1,"month");if(next.isAfter(END_DATE,"month"))return;visibleMonth=next;renderCalendar();});
