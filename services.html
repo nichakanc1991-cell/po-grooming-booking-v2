@@ -29,7 +29,7 @@
     }
     .modal-bg {
       background: rgba(0,0,0,0.5);
-      backdrop-filter: blur(2px);
+      backdrop-filter: blur(3px);
     }
   </style>
 </head>
@@ -42,63 +42,24 @@
   </header>
 
   <!-- Content -->
-  <main class="max-w-5xl mx-auto px-4 mt-10">
+  <main class="max-w-6xl mx-auto px-4 mt-10">
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <!-- ตัวอย่างบริการ -->
-      <div class="card">
-        <h2 class="text-xl font-semibold mb-2">โปรแกรมเคลียร์สังกะตัง / ขนพัน / ขนตาย</h2>
-        <p>ช่วยคลายขนพัน ป้องกันแผลและผิวหนังอักเสบ</p>
-        <button onclick="openModal('clearMat')" 
-                class="mt-4 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">
-          ดูรายละเอียด
-        </button>
-      </div>
-
-      <div class="card">
-        <h2 class="text-xl font-semibold mb-2">โปรแกรมขจัดคราบไขมันฮอร์โมน</h2>
-        <p>ขจัดคราบมันสะสมจากฮอร์โมน และลดกลิ่นไม่พึงประสงค์</p>
-        <button onclick="openModal('hormone')" 
-                class="mt-4 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">
-          ดูรายละเอียด
-        </button>
-      </div>
-
-      <div class="card">
-        <h2 class="text-xl font-semibold mb-2">โปรแกรมเคลียร์ช่องหู ล้างลึก</h2>
-        <p>ขจัดไรในหูและสิ่งสกปรกสะสม ลดการคันและกลิ่น</p>
-        <button onclick="openModal('ear')" 
-                class="mt-4 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">
-          ดูรายละเอียด
-        </button>
-      </div>
-
-      <div class="card">
-        <h2 class="text-xl font-semibold mb-2">โปรแกรมฟอกน้ำยารักษาผิวหนัง</h2>
-        <p>รักษาเชื้อรา ยีสต์ แบคทีเรีย และผิวหนังอักเสบ</p>
-        <button onclick="openModal('skin')" 
-                class="mt-4 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">
-          ดูรายละเอียด
-        </button>
-      </div>
-
-      <div class="card">
-        <h2 class="text-xl font-semibold mb-2">แปรงฟัน Oxyfresh</h2>
-        <p>ลดกลิ่นปาก บำรุงเหงือกและฟันให้น้อง ๆ สุขภาพดี</p>
-        <button onclick="openModal('tooth')" 
-                class="mt-4 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">
-          ดูรายละเอียด
-        </button>
-      </div>
-
-      <div class="card">
-        <h2 class="text-xl font-semibold mb-2">ตัดเล็บและตะไบ</h2>
-        <p>ดูแลเท้าน้องให้ปลอดภัย ป้องกันเล็บงอกหรือข่วนตัวเอง</p>
-        <button onclick="openModal('nail')" 
-                class="mt-4 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">
-          ดูรายละเอียด
-        </button>
-      </div>
+      <!-- บริการทั้งหมด -->
+      <div class="card"><h2>แปรงฟัน Oxyfresh</h2><p>ลดกลิ่นปาก บำรุงเหงือกและฟันให้น้องสุขภาพดี</p><button onclick="openModal('tooth')">ดูรายละเอียด</button></div>
+      <div class="card"><h2>บีบต่อม</h2><p>ช่วยขับของเสียในต่อม ลดกลิ่นและป้องกันอักเสบ</p><button onclick="openModal('gland')">ดูรายละเอียด</button></div>
+      <div class="card"><h2>ถอนขนหู</h2><p>ลดการอับชื้น ป้องกันเชื้อราในช่องหู</p><button onclick="openModal('earHair')">ดูรายละเอียด</button></div>
+      <div class="card"><h2>เคลียร์สังกะตัง / ขนพัน / ขนตาย</h2><p>คลายขนพัน ป้องกันแผลและผิวหนังอักเสบ</p><button onclick="openModal('clearMat')">ดูรายละเอียด</button></div>
+      <div class="card"><h2>แชมพูสปา + ทรีทเมนท์</h2><p>ปรับสมดุลผิวหนังและเส้นขนให้นุ่มเงางาม</p><button onclick="openModal('spa')">ดูรายละเอียด</button></div>
+      <div class="card"><h2>แชมพูสปา + SEA SALT</h2><p>ขจัดคราบ ฟื้นฟูผิวและเส้นขน</p><button onclick="openModal('sea')">ดูรายละเอียด</button></div>
+      <div class="card"><h2>ฟอกน้ำยารักษาผิวหนัง</h2><p>รักษาเชื้อรา ยีสต์ แบคทีเรีย</p><button onclick="openModal('skin')">ดูรายละเอียด</button></div>
+      <div class="card"><h2>ขจัดคราบไขมันฮอร์โมน</h2><p>ขจัดคราบมันจากฮอร์โมน ลดกลิ่นไม่พึงประสงค์</p><button onclick="openModal('hormone')">ดูรายละเอียด</button></div>
+      <div class="card"><h2>จัดโปรตีนขัดหมัด</h2><p>ลดหมัด เห็บ และฟื้นฟูขนให้นุ่มสะอาด</p><button onclick="openModal('flea')">ดูรายละเอียด</button></div>
+      <div class="card"><h2>หวีสางขนหลุด / ขนตาย</h2><p>ลดขนร่วง ขจัดขนตายที่ติดแน่น</p><button onclick="openModal('comb')">ดูรายละเอียด</button></div>
+      <div class="card"><h2>เคลียร์ช่องหูล้างลึก</h2><p>ขจัดไรในหูและสิ่งสกปรกสะสม ลดกลิ่นและคัน</p><button onclick="openModal('ear')">ดูรายละเอียด</button></div>
+      <div class="card"><h2>ตัดเล็บและตะไบ</h2><p>ดูแลเท้าน้องให้ปลอดภัย ป้องกันเล็บงอกหรือข่วนตัวเอง</p><button onclick="openModal('nail')">ดูรายละเอียด</button></div>
+      <div class="card"><h2>เคลียร์คราบรอบตา หู หรือปาก</h2><p>ทำความสะอาดเฉพาะจุดให้สดใส ไม่หมอง</p><button onclick="openModal('stain')">ดูรายละเอียด</button></div>
+      <div class="card"><h2>เคลียร์ช่องหูพิเศษ</h2><p>ล้างลึกสำหรับน้องที่มีไรหูบ่อยหรือสะสมมาก</p><button onclick="openModal('deepEar')">ดูรายละเอียด</button></div>
 
     </div>
   </main>
@@ -109,78 +70,39 @@
     <p class="mt-1">Line: <a href="https://lin.ee/svSM9zt" class="underline">@po_grooming</a></p>
   </footer>
 
-
-  <!-- Modal Templates -->
-  <div id="modal-clearMat" class="hidden fixed inset-0 modal-bg flex justify-center items-center z-50">
-    <div class="bg-white rounded-xl p-6 max-w-md">
-      <h2 class="text-2xl font-bold mb-2">โปรแกรมเคลียร์สังกะตัง / ขนพัน / ขนตาย</h2>
-      <p>ช่วยลดการพันกันของขนที่ทำให้น้องเจ็บตัว และลดความเสี่ยงต่อโรคผิวหนัง โดยใช้เทคนิคอ่อนโยนไม่ดึงรั้ง
-      เหมาะสำหรับน้องที่ขนพันหรือขนหนาแน่นมาก</p>
-      <p class="text-[var(--po-gold)] font-semibold mt-3">ราคาประเมินตามหน้างาน</p>
-      <button onclick="closeModal('clearMat')" 
-              class="mt-5 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">
-        ปิด
-      </button>
-    </div>
-  </div>
-
-  <div id="modal-hormone" class="hidden fixed inset-0 modal-bg flex justify-center items-center z-50">
-    <div class="bg-white rounded-xl p-6 max-w-md">
-      <h2 class="text-2xl font-bold mb-2">โปรแกรมขจัดคราบไขมันฮอร์โมน</h2>
-      <p>ช่วยกำจัดคราบมันจากต่อมฮอร์โมน โดยเฉพาะบริเวณโคนหางและหลัง ลดกลิ่นเหม็นและการสะสมของเชื้อแบคทีเรีย 
-      ใช้ผลิตภัณฑ์จากสารสกัดธรรมชาติ ปลอดภัยสำหรับผิวแพ้ง่าย</p>
-      <p class="text-[var(--po-gold)] font-semibold mt-3">เริ่มต้น 100 บาท</p>
-      <button onclick="closeModal('hormone')" 
-              class="mt-5 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">
-        ปิด
-      </button>
-    </div>
-  </div>
-
-  <div id="modal-ear" class="hidden fixed inset-0 modal-bg flex justify-center items-center z-50">
-    <div class="bg-white rounded-xl p-6 max-w-md">
-      <h2 class="text-2xl font-bold mb-2">โปรแกรมเคลียร์ช่องหู ล้างลึก</h2>
-      <p>ช่วยขจัดไรในหู สิ่งสกปรก และน้ำมันส่วนเกินในช่องหู ลดกลิ่นและการอับชื้น 
-      ป้องกันเชื้อราและหูอักเสบ เหมาะกับน้องที่คันหูหรือชอบส่ายหัวบ่อย</p>
-      <p class="text-[var(--po-gold)] font-semibold mt-3">เริ่มต้น 100 บาท</p>
-      <button onclick="closeModal('ear')" 
-              class="mt-5 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">
-        ปิด
-      </button>
-    </div>
-  </div>
-
-  <div id="modal-skin" class="hidden fixed inset-0 modal-bg flex justify-center items-center z-50">
-    <div class="bg-white rounded-xl p-6 max-w-md">
-      <h2 class="text-2xl font-bold mb-2">โปรแกรมฟอกน้ำยารักษาผิวหนัง</h2>
-      <p>โปรแกรมบำรุงและรักษาผิวหนังอักเสบจากเชื้อรา ยีสต์ แบคทีเรีย และรังแค 
-      ช่วยให้ผิวหนังแข็งแรง ลดอาการคัน และฟื้นฟูสุขภาพขนให้นุ่มสะอาด</p>
-      <p class="text-[var(--po-gold)] font-semibold mt-3">+100 – 300 บาท</p>
-      <button onclick="closeModal('skin')" 
-              class="mt-5 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">
-        ปิด
-      </button>
-    </div>
-  </div>
-
+  <!-- MODALS -->
+  <!-- ตัวอย่าง modal -->
   <div id="modal-tooth" class="hidden fixed inset-0 modal-bg flex justify-center items-center z-50">
-    <div class="bg-white rounded-xl p-6 max-w-md">
+    <div class="bg-white rounded-xl p-6 max-w-md text-center">
       <h2 class="text-2xl font-bold mb-2">แปรงฟัน Oxyfresh</h2>
-      <p>ทำความสะอาดช่องปาก ลดคราบพลัคและกลิ่นปาก พร้อมบำรุงเหงือกและฟัน 
-      ด้วยผลิตภัณฑ์ Oxyfresh ปลอดภัยต่อสัตว์เลี้ยงทุกวัย</p>
-      <p class="text-[var(--po-gold)] font-semibold mt-3">50 – 100 บาท</p>
-      <button onclick="closeModal('tooth')" 
-              class="mt-5 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">
-        ปิด
-      </button>
+      <p>ทำความสะอาดช่องปาก ลดคราบพลัคและกลิ่นปาก พร้อมบำรุงเหงือกและฟัน ด้วยผลิตภัณฑ์ Oxyfresh ปลอดภัยสำหรับสัตว์เลี้ยงทุกวัย</p>
+      <p class="text-[var(--po-gold)] mt-3 font-semibold">ราคา 50–100 บาท</p>
+      <button onclick="closeModal('tooth')" class="mt-4 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">ปิด</button>
     </div>
   </div>
 
-  <div id="modal-nail" class="hidden fixed inset-0 modal-bg flex justify-center items-center z-50">
-    <div class="bg-white rounded-xl p-6 max-w-md">
-      <h2 class="text-2xl font-bold mb-2">ตัดเล็บและตะไบ</h2>
-      <p>ดูแลเท้าน้องให้สะอาด ป้องกันการข่วนและเล็บงอกเข้าผิวหนัง 
-      ใช้อุปกรณ์ปลอดภัยและฆ่าเชื้อทุกครั้งก่อนใช้งาน</p>
-      <p class="text-[var(--po-gold)] font-semibold mt-3">150 บาท / ตัดอย่างเดียว 50–100 บาท</p>
-      <button onclick="closeModal('nail')" 
-              class="mt-5 bg-[var(--po-green)] text-[var(-]()
+  <!-- (ตัวอย่างด้านล่างเป็น modal อื่น ๆ แบบสั้นเพื่อไม่ให้ซ้ำรหัส) -->
+  <div id="modal-gland" class="hidden fixed inset-0 modal-bg flex justify-center items-center z-50"><div class="bg-white rounded-xl p-6 max-w-md text-center"><h2 class="text-2xl font-bold mb-2">บีบต่อม</h2><p>ช่วยขับของเสียในต่อม ลดกลิ่น ป้องกันการอักเสบอย่างปลอดภัย</p><p class="text-[var(--po-gold)] mt-3 font-semibold">50–100 บาท</p><button onclick="closeModal('gland')" class="mt-4 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">ปิด</button></div></div>
+  <div id="modal-earHair" class="hidden fixed inset-0 modal-bg flex justify-center items-center z-50"><div class="bg-white rounded-xl p-6 max-w-md text-center"><h2 class="text-2xl font-bold mb-2">ถอนขนหู</h2><p>ช่วยลดความอับชื้น ป้องกันเชื้อราในช่องหู</p><p class="text-[var(--po-gold)] mt-3 font-semibold">50–100 บาท</p><button onclick="closeModal('earHair')" class="mt-4 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">ปิด</button></div></div>
+  <div id="modal-clearMat" class="hidden fixed inset-0 modal-bg flex justify-center items-center z-50"><div class="bg-white rounded-xl p-6 max-w-md text-center"><h2 class="text-2xl font-bold mb-2">เคลียร์สังกะตัง</h2><p>คลายขนพัน ขจัดขนตายโดยไม่ทำร้ายผิวหนัง</p><p class="text-[var(--po-gold)] mt-3 font-semibold">ราคาประเมินตามหน้างาน</p><button onclick="closeModal('clearMat')" class="mt-4 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">ปิด</button></div></div>
+  <div id="modal-spa" class="hidden fixed inset-0 modal-bg flex justify-center items-center z-50"><div class="bg-white rounded-xl p-6 max-w-md text-center"><h2 class="text-2xl font-bold mb-2">แชมพูสปา + ทรีทเมนท์</h2><p>ช่วยปรับสมดุลผิวหนังและเส้นขนให้นุ่มเงางาม</p><p class="text-[var(--po-gold)] mt-3 font-semibold">+50–100 บาท</p><button onclick="closeModal('spa')" class="mt-4 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">ปิด</button></div></div>
+  <div id="modal-sea" class="hidden fixed inset-0 modal-bg flex justify-center items-center z-50"><div class="bg-white rounded-xl p-6 max-w-md text-center"><h2 class="text-2xl font-bold mb-2">แชมพูสปา + SEA SALT</h2><p>ขจัดคราบและฟื้นฟูเส้นขนด้วยเกลือทะเลธรรมชาติ</p><p class="text-[var(--po-gold)] mt-3 font-semibold">เริ่มต้น 200 บาท</p><button onclick="closeModal('sea')" class="mt-4 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">ปิด</button></div></div>
+  <div id="modal-skin" class="hidden fixed inset-0 modal-bg flex justify-center items-center z-50"><div class="bg-white rounded-xl p-6 max-w-md text-center"><h2 class="text-2xl font-bold mb-2">ฟอกน้ำยารักษาผิวหนัง</h2><p>รักษาผิวหนังอักเสบจากเชื้อรา ยีสต์ แบคทีเรีย และรังแค</p><p class="text-[var(--po-gold)] mt-3 font-semibold">100–300 บาท</p><button onclick="closeModal('skin')" class="mt-4 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">ปิด</button></div></div>
+  <div id="modal-hormone" class="hidden fixed inset-0 modal-bg flex justify-center items-center z-50"><div class="bg-white rounded-xl p-6 max-w-md text-center"><h2 class="text-2xl font-bold mb-2">ขจัดคราบไขมันฮอร์โมน</h2><p>ขจัดคราบมันจากต่อมฮอร์โมน ลดกลิ่นและอาการอักเสบ</p><p class="text-[var(--po-gold)] mt-3 font-semibold">+100–500 บาท</p><button onclick="closeModal('hormone')" class="mt-4 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">ปิด</button></div></div>
+  <div id="modal-flea" class="hidden fixed inset-0 modal-bg flex justify-center items-center z-50"><div class="bg-white rounded-xl p-6 max-w-md text-center"><h2 class="text-2xl font-bold mb-2">โปรตีนขัดหมัด</h2><p>กำจัดหมัด เห็บ พร้อมบำรุงขนให้นุ่มสะอาด</p><p class="text-[var(--po-gold)] mt-3 font-semibold">100–200 บาท</p><button onclick="closeModal('flea')" class="mt-4 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">ปิด</button></div></div>
+  <div id="modal-comb" class="hidden fixed inset-0 modal-bg flex justify-center items-center z-50"><div class="bg-white rounded-xl p-6 max-w-md text-center"><h2 class="text-2xl font-bold mb-2">หวีสางขนหลุด</h2><p>ลดขนร่วง ช่วยให้ขนไม่พันและระบายอากาศดี</p><p class="text-[var(--po-gold)] mt-3 font-semibold">50–200 บาท</p><button onclick="closeModal('comb')" class="mt-4 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">ปิด</button></div></div>
+  <div id="modal-ear" class="hidden fixed inset-0 modal-bg flex justify-center items-center z-50"><div class="bg-white rounded-xl p-6 max-w-md text-center"><h2 class="text-2xl font-bold mb-2">เคลียร์ช่องหู</h2><p>ล้างช่องหูลึก ขจัดไรในหู ลดการคันและกลิ่น</p><p class="text-[var(--po-gold)] mt-3 font-semibold">+50–100 บาท</p><button onclick="closeModal('ear')" class="mt-4 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">ปิด</button></div></div>
+  <div id="modal-nail" class="hidden fixed inset-0 modal-bg flex justify-center items-center z-50"><div class="bg-white rounded-xl p-6 max-w-md text-center"><h2 class="text-2xl font-bold mb-2">ตัดเล็บและตะไบ</h2><p>ดูแลเท้าน้อง ป้องกันเล็บงอกหรือข่วนตัวเอง</p><p class="text-[var(--po-gold)] mt-3 font-semibold">150 บาท / ตัดอย่างเดียว 50–100 บาท</p><button onclick="closeModal('nail')" class="mt-4 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">ปิด</button></div></div>
+  <div id="modal-stain" class="hidden fixed inset-0 modal-bg flex justify-center items-center z-50"><div class="bg-white rounded-xl p-6 max-w-md text-center"><h2 class="text-2xl font-bold mb-2">เคลียร์คราบรอบตา หู หรือปาก</h2><p>ทำความสะอาดเฉพาะจุดให้สดใส ดูสะอาดขึ้นทันที</p><p class="text-[var(--po-gold)] mt-3 font-semibold">50–100 บาท</p><button onclick="closeModal('stain')" class="mt-4 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">ปิด</button></div></div>
+  <div id="modal-deepEar" class="hidden fixed inset-0 modal-bg flex justify-center items-center z-50"><div class="bg-white rounded-xl p-6 max-w-md text-center"><h2 class="text-2xl font-bold mb-2">เคลียร์ช่องหูพิเศษ</h2><p>ล้างหูลึกด้วยเทคนิคเฉพาะ ลดการสะสมของไรหูและกลิ่น</p><p class="text-[var(--po-gold)] mt-3 font-semibold">100 บาทขึ้นไป</p><button onclick="closeModal('deepEar')" class="mt-4 bg-[var(--po-green)] text-[var(--po-cream)] px-4 py-2 rounded-lg">ปิด</button></div></div>
+
+  <script>
+    function openModal(id){
+      document.getElementById("modal-"+id).classList.remove("hidden");
+    }
+    function closeModal(id){
+      document.getElementById("modal-"+id).classList.add("hidden");
+    }
+  </script>
+</body>
+</html>
