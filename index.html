@@ -1,157 +1,176 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PO Grooming & Cat Hotel</title>
-
-  <!-- Tailwind CSS v3 -->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-
-  <!-- Font: Prompt -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --po-green-deep: #0b3d36;
-      --po-green-mid: #114d42;
-      --po-cream: #f2e2c4;
-      --po-gold: #d5b774;
+      --po-deep: #0F3B2E;
+      --po-mid: #1E5D48;
+      --po-cream: #F2E2C4;
+      --po-gold: #D5B774;
     }
+
     body {
       font-family: "Prompt", sans-serif;
-      background: linear-gradient(to bottom, var(--po-green-deep) 0%, var(--po-green-mid) 50%, var(--po-cream) 100%);
+      background: linear-gradient(to bottom, var(--po-deep) 0%, var(--po-mid) 40%, var(--po-cream) 100%);
       color: var(--po-cream);
       min-height: 100vh;
+      text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: center;
       padding: 2rem 1rem;
     }
+
     header img {
       width: 120px;
-      margin-bottom: 1.5rem;
-      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+      height: auto;
+      margin-bottom: 1.2rem;
+      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
     }
+
     h1 {
       font-size: 1.9rem;
       color: var(--po-gold);
       font-weight: 700;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+      text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      margin-bottom: 0.5rem;
     }
+
     p {
-      color: var(--po-cream);
-      margin-top: 0.5rem;
-      font-size: 1.05rem;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+      margin: 0.2rem 0;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.15);
     }
+
     .btn {
       display: block;
       width: 80%;
-      max-width: 320px;
-      padding: 1rem 2rem;
+      max-width: 300px;
       margin: 1rem auto;
-      border-radius: 12px;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
       font-weight: 600;
-      transition: all 0.25s ease;
+      border-radius: 12px;
+      transition: all 0.3s ease-in-out;
     }
+
     .btn-main {
-      background: var(--po-cream);
-      color: var(--po-green-deep);
-      box-shadow: 0 2px 6px rgba(213,183,116,0.4);
+      background-color: var(--po-cream);
+      color: var(--po-deep);
+      box-shadow: 0 2px 8px rgba(213,183,116,0.3);
     }
     .btn-main:hover {
-      background: var(--po-gold);
-      color: var(--po-green-deep);
+      background-color: var(--po-gold);
+      color: var(--po-deep);
       transform: translateY(-2px);
     }
+
     .btn-secondary {
-      background: var(--po-green-deep);
+      background-color: var(--po-deep);
       color: var(--po-cream);
       border: 2px solid var(--po-cream);
       box-shadow: 0 2px 8px rgba(0,0,0,0.25);
     }
     .btn-secondary:hover {
-      background: var(--po-green-mid);
+      background-color: var(--po-mid);
+      color: var(--po-cream);
       transform: translateY(-2px);
     }
+
     footer {
       margin-top: 3rem;
       font-size: 0.9rem;
       color: var(--po-cream);
       opacity: 0.9;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+      text-shadow: 0 1px 3px rgba(0,0,0,0.25);
     }
+
+    /* มือถือ */
     @media (max-width: 768px) {
       header img { width: 100px; }
-      h1 { font-size: 1.6rem; }
+      h1 { font-size: 1.5rem; }
       p { font-size: 0.95rem; }
-      .btn { width: 90%; padding: 1rem; font-size: 1rem; }
+      .btn { width: 90%; font-size: 1rem; padding: 1rem; }
     }
   </style>
 </head>
-
 <body>
 
   <!-- Header -->
-  <header>
+  <header class="py-4">
     <img src="logo-po.png" alt="PO Grooming Logo">
     <h1>PO GROOMING PRIVATE & PREMIUM</h1>
-    <p>✂️ FUR STYLING CREATIVE PET GROOMING</p>
-    <p>🛁 PET SPA & SALON | 🐈🏩 CAT HOTEL | 🐾 PET SHOP</p>
+    <p class="text-lg mt-2">Fur Styling • Cat & Dog Spa • Premium Hotel</p>
 
-    <div class="mt-3">
+    <div class="mt-4">
       <button onclick="setLang('th')" class="mx-2 underline hover:text-yellow-200">ไทย</button> |
       <button onclick="setLang('en')" class="mx-2 underline hover:text-yellow-200">English</button> |
       <button onclick="setLang('zh')" class="mx-2 underline hover:text-yellow-200">中文</button>
     </div>
   </header>
 
-  <!-- Main -->
+  <!-- Main Buttons -->
   <main class="mt-10">
-    <a href="grooming.html?lang=th" class="btn btn-main">
-      จองคิวอาบน้ำ–ตัดขน
-    </a>
-    <a href="hotel.html?lang=th" class="btn btn-secondary">
-      จองห้องพักโรงแรมแมว
-    </a>
+    <a href="grooming.html" class="btn btn-main" data-type="grooming">จองคิวอาบน้ำ–ตัดขน</a>
+    <a href="hotel.html" class="btn btn-secondary" data-type="hotel">จองห้องพักโรงแรมแมว</a>
   </main>
 
-  <!-- Footer -->
   <footer>
     © 2025 PO Grooming & Cat Hotel | Private & Premium Cat Care Experience
   </footer>
 
-  <!-- JS Language / n8n connection -->
   <script>
-    // language switcher
+    // --- language toggle ---
     function setLang(lang) {
       localStorage.setItem("poLang", lang);
-      const groomingURL = `grooming.html?lang=${lang}`;
-      const hotelURL = `hotel.html?lang=${lang}`;
-      document.querySelectorAll("a.btn-main")[0].href = groomingURL;
-      document.querySelectorAll("a.btn-secondary")[0].href = hotelURL;
+      const buttons = document.querySelectorAll("a[data-type]");
+      buttons.forEach(btn => {
+        const base = btn.getAttribute("data-type");
+        btn.href = `${base}.html?lang=${lang}`;
+      });
     }
 
-    // n8n Integration Blueprint (ready for backend connection)
-    const N8N_WEBHOOK_URL = "https://your-n8n-server/webhook/po-booking";
+    // --- เชื่อมต่อระบบ n8n / Google Sheet ---
+    // ในอนาคตหน้า grooming.html และ hotel.html จะใช้ฟังก์ชันนี้
+    const N8N_WEBHOOK_URL = "https://YOUR-N8N-DOMAIN/webhook/po-booking";
 
-    async function sendBookingData(data) {
+    async function sendBookingToN8N(formData) {
       try {
-        const res = await fetch(N8N_WEBHOOK_URL, {
+        const response = await fetch(N8N_WEBHOOK_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data)
+          body: JSON.stringify(formData)
         });
-        console.log("Booking sent to n8n:", await res.text());
+        if (response.ok) {
+          console.log("✅ Booking data sent successfully");
+        } else {
+          console.warn("⚠️ Failed to send booking:", response.statusText);
+        }
       } catch (err) {
-        console.error("Error sending to n8n:", err);
+        console.error("❌ Error connecting to n8n:", err);
       }
     }
+
+    // ตัวอย่างการเรียกใช้งาน (จะใช้จริงใน grooming.html)
+    /*
+    const exampleData = {
+      type: "grooming",
+      customerName: "สมชาย",
+      petName: "มะลิ",
+      service: "อาบน้ำ-ตัดขน",
+      date: "2025-11-05",
+      time: "13:00",
+      deposit: 400,
+      status: "pending"
+    };
+    sendBookingToN8N(exampleData);
+    */
   </script>
 
 </body>
